@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2015/10/06 10:03:08.425.cbproj,C:\Users\t.hamaguchi\Documents\RAD Studio\Projects\Project1.cbproj=C:\Users\t.hamaguchi\Documents\RAD Studio\Projects\practice4.cbproj</Transaction>
+    <Transaction>2015/10/06 10:03:49.132.cpp,C:\Users\t.hamaguchi\Documents\RAD Studio\Projects\Unit1.cpp=C:\Project\Cpp\test\practice4\Unit1.cpp</Transaction>
+    <Transaction>2015/10/06 10:03:49.132.h,C:\Users\t.hamaguchi\Documents\RAD Studio\Projects\Unit1.h=C:\Project\Cpp\test\practice4\Unit1.h</Transaction>
+    <Transaction>2015/10/06 10:03:49.132.dfm,C:\Users\t.hamaguchi\Documents\RAD Studio\Projects\Unit1.dfm=C:\Project\Cpp\test\practice4\Unit1.dfm</Transaction>
+    <Transaction>2015/10/06 10:04:00.766.cbproj,C:\Users\t.hamaguchi\Documents\RAD Studio\Projects\practice4.cbproj=C:\Project\Cpp\test\practice4\practice4.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
