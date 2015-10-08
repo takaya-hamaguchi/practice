@@ -257,7 +257,6 @@ void __fastcall TForm1::grd_AddressDrawCell(TObject *Sender, int ACol, int ARow,
 //		&Rect,
 //		pos
 //	);
-	TStringGrid *grid = dynamic_cast<TStringGrid *>(Sender);
 	AnsiString value = grd_Address->Cells[ACol][ARow];
 	unsigned int position = DT_VCENTER|DT_CENTER|DT_SINGLELINE;
 
@@ -587,12 +586,12 @@ void __fastcall TForm1::Preview()
 
         //**************************************************
 		//【印刷データ設定】
+		//  住所リスト
 		//**************************************************
 		int record = 0;
 		int page = 1;
 		int pageAll = (this->grd_Address->RowCount / 15) + 1;
 
-		// 住所リスト
 		for (int i = 1; i < this->grd_Address->RowCount; i++)
 		{
 			//==================================================
@@ -644,15 +643,33 @@ void __fastcall TForm1::Preview()
 			//==================================================
 			if (record >= 15)
 			{
+				// タイトル
+				crp_practice4->Item("", "lbl_Title")->Text = "課題４";
+
+				//【ヘッダ】ID
+				crp_practice4->Item("", "lbl_Header_Id")->Text = "ID";
+
+				//【ヘッダ】名前
+				crp_practice4->Item("", "lbl_Header_Name")->Text = "名前";
+
+				//【ヘッダ】住所
+				crp_practice4->Item("", "lbl_Header_Address")->Text = "住所";
+
+				//【ヘッダ】メモ
+				crp_practice4->Item("", "lbl_Header_Memo")->Text = "メモ";
+
 				// ページ数
 				crp_practice4->Item("", "lbl_Page")->Text = IntToStr(page) + "／" + IntToStr(pageAll);
 
-				// 改ページ前
+				// 印刷（プレビュー）
 				crp_practice4->PrintReport();
 			}
 		}
 
-		// 空行
+		//**************************************************
+		//【印刷データ設定】
+		//  空行
+		//**************************************************
 		while (record < 15)
 		{
 			record++;
@@ -666,11 +683,27 @@ void __fastcall TForm1::Preview()
 			crp_practice4->Item("Record" + IntToStr(record), "lbl_Memo")->Visible = false;
 		}
 
+		// タイトル
+		crp_practice4->Item("", "lbl_Title")->Text = "課題４";
+
+		//【ヘッダ】ID
+		crp_practice4->Item("", "lbl_Header_Id")->Text = "ID";
+
+		//【ヘッダ】名前
+		crp_practice4->Item("", "lbl_Header_Name")->Text = "名前";
+
+		//【ヘッダ】住所
+		crp_practice4->Item("", "lbl_Header_Address")->Text = "住所";
+
+		//【ヘッダ】メモ
+		crp_practice4->Item("", "lbl_Header_Memo")->Text = "メモ";
+
 		// ページ数
 		crp_practice4->Item("", "lbl_Page")->Text = IntToStr(page) + "／" + IntToStr(pageAll);
 
         //**************************************************
 		//【印刷（プレビュー）】
+		//  空行
 		//**************************************************
 		crp_practice4->PrintReport();
 
