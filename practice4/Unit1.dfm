@@ -47,67 +47,13 @@ object Form1: TForm1
     Height = 46
     Pen.Color = clGray
   end
-  object grd_Address: TDBGrid
-    Left = 20
-    Top = 50
-    Width = 545
-    Height = 300
-    Options = [dgEditing, dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleHotTrack]
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'id'
-        Title.Alignment = taCenter
-        Title.Caption = 'ID'
-        Width = 50
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'name'
-        Title.Alignment = taCenter
-        Title.Caption = #21517#21069
-        Width = 120
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'address'
-        Title.Alignment = taCenter
-        Title.Caption = #20303#25152
-        Width = 165
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'memo'
-        Title.Alignment = taCenter
-        Title.Caption = #12513#12514
-        Width = 162
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'valid'
-        Title.Alignment = taCenter
-        Title.Caption = #26377#21177
-        Width = 40
-        Visible = True
-      end>
-  end
   object btn_Preview: TButton
     Left = 445
     Top = 375
     Width = 120
     Height = 30
     Caption = #12503#12524#12499#12517#12540
-    TabOrder = 1
+    TabOrder = 0
     OnClick = btn_PreviewClick
   end
   object btn_End: TButton
@@ -116,7 +62,7 @@ object Form1: TForm1
     Width = 120
     Height = 30
     Caption = #32066#20102
-    TabOrder = 2
+    TabOrder = 1
     OnClick = btn_EndClick
   end
   object btn_CsvOutput: TButton
@@ -125,7 +71,26 @@ object Form1: TForm1
     Width = 120
     Height = 30
     Caption = 'CSV'#20986#21147
-    TabOrder = 3
+    TabOrder = 2
     OnClick = btn_CsvOutputClick
+  end
+  object grd_Address: TStringGrid
+    Left = 21
+    Top = 50
+    Width = 544
+    Height = 300
+    Color = clBtnFace
+    DefaultColWidth = 100
+    FixedCols = 0
+    RowCount = 2
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
+    TabOrder = 3
+    OnDrawCell = grd_AddressDrawCell
+  end
+  object crp_practice4: TCrpReport
+    Copies = 2
+  end
+  object dlg_CsvOutput: TSaveDialog
+    Left = 32
   end
 end
