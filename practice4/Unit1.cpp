@@ -564,7 +564,7 @@ void __fastcall TForm1::Preview()
         //**************************************************
 		//yƒŒƒ|[ƒgÝ’èz
 		//**************************************************
-		crp_practice4->ReportPath = "../practice4.crp";
+		crp_practice4->ReportPath = "practice4.crp";
 		prtOpt << cpfDIALOG << cpfSTRETCH <<cpfPREVIEW_MAXIMIZED;
 
         //**************************************************
